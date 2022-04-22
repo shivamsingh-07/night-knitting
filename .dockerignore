@@ -1,0 +1,12 @@
+# Directories
+node_modules
+.git
+
+# Files
+env.template
+.env
+.gitignore
+.prettierrc
+
+LICENSE
+README.md
