@@ -1,6 +1,6 @@
 # Night Knitting
 
-Night Knitting is an online event that will run for 48 hours during the college fest, [Zealicon](http://zealicon.in). It is a puzzle game that would require problem-solving skills and an understanding of front-end web technologies. Users will progress through the levels by analyzing hints and the HTML code.
+Night Knitting is an online event that will run for 48 hours during the college fest, [Zealicon](https://zealicon.in). It is a puzzle game that would require problem-solving skills and an understanding of front-end web technologies. Users will progress through the levels by analyzing hints and the HTML code.
 
 ## Steps to setup on Linux/MacOS:
 

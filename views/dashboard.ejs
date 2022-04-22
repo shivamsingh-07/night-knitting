@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Authentication</title>
+    </head>
+    <body>
+        <img src="<%= user.avatar %>" alt="" srcset="" />
+        <h1>Hello <%= user.name %>, you are authenticated.</h1>
+        <h3>Email: <%= user.email %></h3>
+        <br /><br />
+        <a href="/level/<%= user.level %>" role="button">Play</a>
+        <br /><br />
+        <form action="/auth/logout" method="post">
+            <input type="submit" value="Log Out" />
+        </form>
+    </body>
+</html>
