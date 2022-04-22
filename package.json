@@ -7,7 +7,7 @@
     "scripts": {
         "start": "node index.js",
         "dev": "nodemon index.js",
-        "format": "prettier --config ./.prettierrc --write ."
+        "format": "prettier --config .prettierrc --write ."
     },
     "dependencies": {
         "connect-mongo": "^4.6.0",
