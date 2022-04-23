@@ -37,7 +37,7 @@ app.use(
         emptyUserAgentDeviceType: "phone"
     }),
     (req, res, next) => {
-        if (req.device.type != "desktop") return res.send(req.device.type + " is not allowed.");
+        if (req.device.type != "desktop") return res.render("mobile");
         next();
     }
 );
@@ -61,9 +61,11 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 // Routes
-app.get("/", ensureGuest, (req, res) => res.render("index"));
 app.use("/auth", require("./routes/auth"));
 app.use("/level", ensureAuth, require("./routes/level"));
+app.use("/leaderboard", ensureAuth, require("./routes/leaderboard"));
+
+app.get("/", ensureGuest, (req, res) => res.render("index"));
 app.get("/dashboard", ensureAuth, (req, res) => res.render("dashboard", { user: req.user }));
 
 const PORT = process.env.PORT || 5000;

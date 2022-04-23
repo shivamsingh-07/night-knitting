@@ -17,7 +17,6 @@
         "express-session": "^1.17.2",
         "geoip-lite": "^1.4.4",
         "helmet": "^5.0.2",
-        "mobile-detect": "^1.4.5",
         "mongoose": "^6.2.9",
         "morgan": "^1.10.0",
         "passport": "^0.5.2",
