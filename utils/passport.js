@@ -17,7 +17,7 @@ module.exports = (passport) => {
                         name: profile.displayName,
                         email: profile.emails[0].value,
                         avatar: profile.photos[0].value,
-                        level: user ? user.level : 0
+                        level: user ? user.level : 1
                     };
 
                     if (!user) await new User(data).save();

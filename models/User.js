@@ -5,7 +5,7 @@ const UserSchema = new mongoose.Schema({
     name: String,
     email: String,
     avatar: String,
-    level: { type: Number, default: 0 },
+    level: Number,
     score: { type: Number, default: 0 },
     date_created: { type: String, default: new Date().toUTCString() }
 });

@@ -4,17 +4,38 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Authentication</title>
+        <title>Dashboard | Night Knitting</title>
+        <link rel="stylesheet" href="/static/css/style.css" />
     </head>
-    <body>
-        <img src="<%= user.avatar %>" alt="" srcset="" />
-        <h1>Hello <%= user.name %>, you are authenticated.</h1>
-        <h3>Email: <%= user.email %></h3>
-        <br /><br />
-        <a href="/level/<%= user.level %>" role="button">Play</a>
-        <br /><br />
-        <form action="/auth/logout" method="post">
-            <input type="submit" value="Log Out" />
-        </form>
+    <body class="backgroundImage">
+        <div class="P3main">
+            <div class="P3textNight">
+                <div class="P3textNight1">
+                    <p>NIGHT KNITTING</p>
+                </div>
+                <div class="P3iconDiv">
+                    <img class="P3icon" src="/static/images/crab logo.png" />
+                </div>
+                <div class="buttonGroup">
+                    <a class="aP3" href="/level/1">
+                        <p class="P3button">START</p>
+                    </a>
+                    <a class="aP3" href="/howtoplay">
+                        <p class="P3button">HOW TO PLAY</p>
+                    </a>
+                    <a class="aP3" href="/rules">
+                        <p class="P3button">RULES</p>
+                    </a>
+                    <a class="aP3" href="/leaderboard">
+                        <p class="P3button">LEADERBOARD</p>
+                    </a>
+                    <a class="aP3">
+                        <form action="/auth/logout" method="post">
+                            <button type="submit" class="P3button">SIGN OUT</button>
+                        </form>
+                    </a>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
