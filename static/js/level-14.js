@@ -2,7 +2,7 @@
 
 window.history.pushState(null, null, "?");
 
-var _0xafe2 = [
+var _0xde9a = [
     "\x63\x6C\x69\x63\x6B",
     "\x61\x64\x64\x45\x76\x65\x6E\x74\x4C\x69\x73\x74\x65\x6E\x65\x72",
     "\x23\x73\x75\x62\x6D\x69\x74",
@@ -18,6 +18,11 @@ var _0xafe2 = [
     "\x73\x65\x74\x52\x65\x71\x75\x65\x73\x74\x48\x65\x61\x64\x65\x72",
     "\x73\x74\x72\x69\x6E\x67\x69\x66\x79",
     "\x73\x65\x6E\x64",
+    "\x6F\x6E\x72\x65\x61\x64\x79\x73\x74\x61\x74\x65\x63\x68\x61\x6E\x67\x65",
+    "\x72\x65\x61\x64\x79\x53\x74\x61\x74\x65",
+    "\x44\x4F\x4E\x45",
+    "\x72\x65\x6C\x6F\x61\x64",
+    "\x6C\x6F\x63\x61\x74\x69\x6F\x6E",
     "\x73\x6C\x65\x65\x70\x79\x68\x6F\x6C\x6C\x6F\x77\x73",
     "",
     "\x72\x65\x70\x6C\x61\x63\x65",
@@ -72,105 +77,110 @@ var _0xafe2 = [
     "\x6C\x65\x6E\x67\x74\x68"
 ];
 let ans;
-document[_0xafe2[3]](_0xafe2[2])[_0xafe2[1]](_0xafe2[0], submit);
+document[_0xde9a[3]](_0xde9a[2])[_0xde9a[1]](_0xde9a[0], submit);
 function submit() {
-    ans = document[_0xafe2[3]](_0xafe2[5])[_0xafe2[4]];
+    ans = document[_0xde9a[3]](_0xde9a[5])[_0xde9a[4]];
     if (ans == false) {
-        alert(_0xafe2[6]);
+        alert(_0xde9a[6]);
     } else {
-        const _0x5b2cx3 = new XMLHttpRequest();
-        _0x5b2cx3[_0xafe2[9]](_0xafe2[7], _0xafe2[8], true);
-        _0x5b2cx3[_0xafe2[12]](_0xafe2[10], _0xafe2[11]);
-        _0x5b2cx3[_0xafe2[14]](JSON[_0xafe2[13]]({ ans }));
+        const _0x1eecx3 = new XMLHttpRequest();
+        _0x1eecx3[_0xde9a[9]](_0xde9a[7], _0xde9a[8], true);
+        _0x1eecx3[_0xde9a[12]](_0xde9a[10], _0xde9a[11]);
+        _0x1eecx3[_0xde9a[14]](JSON[_0xde9a[13]]({ ans }));
+        _0x1eecx3[_0xde9a[15]] = function () {
+            if (_0x1eecx3[_0xde9a[16]] === XMLHttpRequest[_0xde9a[17]]) {
+                window[_0xde9a[19]][_0xde9a[18]]();
+            }
+        };
     }
 }
-var phrase = _0xafe2[15];
-phrase = phrase[_0xafe2[18]]()[_0xafe2[17]](/[^a-z]/g, _0xafe2[16]);
+var phrase = _0xde9a[20];
+phrase = phrase[_0xde9a[23]]()[_0xde9a[22]](/[^a-z]/g, _0xde9a[21]);
 var alphabet = {
-    a: _0xafe2[19],
-    b: _0xafe2[20],
-    c: _0xafe2[21],
-    d: _0xafe2[22],
-    e: _0xafe2[23],
-    f: _0xafe2[24],
-    g: _0xafe2[25],
-    h: _0xafe2[26],
-    i: _0xafe2[27],
-    j: _0xafe2[28],
-    k: _0xafe2[29],
-    l: _0xafe2[30],
-    m: _0xafe2[31],
-    n: _0xafe2[32],
-    o: _0xafe2[33],
-    p: _0xafe2[34],
-    q: _0xafe2[35],
-    r: _0xafe2[36],
-    s: _0xafe2[37],
-    t: _0xafe2[38],
-    u: _0xafe2[39],
-    v: _0xafe2[40],
-    w: _0xafe2[41],
-    x: _0xafe2[42],
-    y: _0xafe2[43],
-    z: _0xafe2[44],
-    "\x20": _0xafe2[45],
-    1: _0xafe2[46],
-    2: _0xafe2[47],
-    3: _0xafe2[48],
-    4: _0xafe2[49],
-    5: _0xafe2[50],
-    6: _0xafe2[51],
-    7: _0xafe2[52],
-    8: _0xafe2[53],
-    9: _0xafe2[54],
-    0: _0xafe2[55]
+    a: _0xde9a[24],
+    b: _0xde9a[25],
+    c: _0xde9a[26],
+    d: _0xde9a[27],
+    e: _0xde9a[28],
+    f: _0xde9a[29],
+    g: _0xde9a[30],
+    h: _0xde9a[31],
+    i: _0xde9a[32],
+    j: _0xde9a[33],
+    k: _0xde9a[34],
+    l: _0xde9a[35],
+    m: _0xde9a[36],
+    n: _0xde9a[37],
+    o: _0xde9a[38],
+    p: _0xde9a[39],
+    q: _0xde9a[40],
+    r: _0xde9a[41],
+    s: _0xde9a[42],
+    t: _0xde9a[43],
+    u: _0xde9a[44],
+    v: _0xde9a[45],
+    w: _0xde9a[46],
+    x: _0xde9a[47],
+    y: _0xde9a[48],
+    z: _0xde9a[49],
+    "\x20": _0xde9a[50],
+    1: _0xde9a[51],
+    2: _0xde9a[52],
+    3: _0xde9a[53],
+    4: _0xde9a[54],
+    5: _0xde9a[55],
+    6: _0xde9a[56],
+    7: _0xde9a[57],
+    8: _0xde9a[58],
+    9: _0xde9a[59],
+    0: _0xde9a[60]
 };
-phrase = phrase[_0xafe2[59]](_0xafe2[16])
-    [_0xafe2[58]](function (_0x5b2cx6) {
-        return alphabet[_0x5b2cx6[_0xafe2[18]]()] || _0xafe2[16];
+phrase = phrase[_0xde9a[64]](_0xde9a[21])
+    [_0xde9a[63]](function (_0x1eecx6) {
+        return alphabet[_0x1eecx6[_0xde9a[23]]()] || _0xde9a[21];
     })
-    [_0xafe2[57]](_0xafe2[56]);
-phrase = phrase[_0xafe2[59]](_0xafe2[16]);
+    [_0xde9a[62]](_0xde9a[61]);
+phrase = phrase[_0xde9a[64]](_0xde9a[21]);
 var morseL = function () {
-    document[_0xafe2[3]](_0xafe2[63])[_0xafe2[62]][_0xafe2[61]](_0xafe2[60]);
-    document[_0xafe2[3]](_0xafe2[63])[_0xafe2[62]][_0xafe2[61]](_0xafe2[64]);
-    document[_0xafe2[3]](_0xafe2[63])[_0xafe2[62]][_0xafe2[65]](_0xafe2[64]);
+    document[_0xde9a[3]](_0xde9a[68])[_0xde9a[67]][_0xde9a[66]](_0xde9a[65]);
+    document[_0xde9a[3]](_0xde9a[68])[_0xde9a[67]][_0xde9a[66]](_0xde9a[69]);
+    document[_0xde9a[3]](_0xde9a[68])[_0xde9a[67]][_0xde9a[70]](_0xde9a[69]);
     setTimeout(function () {
-        document[_0xafe2[3]](_0xafe2[63])[_0xafe2[62]][_0xafe2[61]](_0xafe2[64]);
+        document[_0xde9a[3]](_0xde9a[68])[_0xde9a[67]][_0xde9a[66]](_0xde9a[69]);
     }, 1200);
 };
 var morseS = function () {
-    document[_0xafe2[3]](_0xafe2[63])[_0xafe2[62]][_0xafe2[61]](_0xafe2[60]);
-    document[_0xafe2[3]](_0xafe2[63])[_0xafe2[62]][_0xafe2[61]](_0xafe2[64]);
-    document[_0xafe2[3]](_0xafe2[63])[_0xafe2[62]][_0xafe2[65]](_0xafe2[60]);
+    document[_0xde9a[3]](_0xde9a[68])[_0xde9a[67]][_0xde9a[66]](_0xde9a[65]);
+    document[_0xde9a[3]](_0xde9a[68])[_0xde9a[67]][_0xde9a[66]](_0xde9a[69]);
+    document[_0xde9a[3]](_0xde9a[68])[_0xde9a[67]][_0xde9a[70]](_0xde9a[65]);
     setTimeout(function () {
-        document[_0xafe2[3]](_0xafe2[63])[_0xafe2[62]][_0xafe2[61]](_0xafe2[60]);
+        document[_0xde9a[3]](_0xde9a[68])[_0xde9a[67]][_0xde9a[66]](_0xde9a[65]);
     }, 400);
 };
 var morseN = function () {
-    document[_0xafe2[3]](_0xafe2[63])[_0xafe2[62]][_0xafe2[61]](_0xafe2[60]);
-    document[_0xafe2[3]](_0xafe2[63])[_0xafe2[62]][_0xafe2[61]](_0xafe2[64]);
+    document[_0xde9a[3]](_0xde9a[68])[_0xde9a[67]][_0xde9a[66]](_0xde9a[65]);
+    document[_0xde9a[3]](_0xde9a[68])[_0xde9a[67]][_0xde9a[66]](_0xde9a[69]);
 };
 var i = 0;
 var time = 0;
 function myLoop() {
     setTimeout(function () {
-        if (phrase[i] === _0xafe2[38]) {
+        if (phrase[i] === _0xde9a[43]) {
             morseL();
             time = 1400;
         } else {
-            if (phrase[i] === _0xafe2[23]) {
+            if (phrase[i] === _0xde9a[28]) {
                 morseS();
                 time = 800;
             } else {
-                if (phrase[i] === _0xafe2[56]) {
+                if (phrase[i] === _0xde9a[61]) {
                     morseN();
                     time = 1200;
                 }
             }
         }
         i++;
-        if (i < phrase[_0xafe2[66]]) {
+        if (i < phrase[_0xde9a[71]]) {
             myLoop();
         } else {
             i = 0;
