@@ -3,14 +3,10 @@
 function submit() {
     ans = document.querySelector("input").value;
     if (ans == false) alert("Enter valid answer");
-    else
-        try {
-            fetch("/level/13", {
-                method: "POST",
-                headers: {
-                    "Content-type": "application/x-www-form-urlencoded; charset=UTF-8"
-                },
-                body: "ans=" + ans
-            }).then(() => {});
-        } catch (error) {}
+    else {
+        const xhr = new XMLHttpRequest();
+        xhr.open("POST", "/level/13", true);
+        xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xhr.send("ans=" + ans);
+    }
 }

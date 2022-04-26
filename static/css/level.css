@@ -127,3 +127,7 @@ input {
     pointer-events: none;
     background: radial-gradient(circle 10vmax at var(--cursorX) var(--cursorY), rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 1) 100%);
 }
+
+#submit:hover {
+    cursor: pointer;
+}

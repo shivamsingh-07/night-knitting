@@ -31,7 +31,11 @@ router.get("/3", (req, res) => {
 router.post("/3", (req, res) => {
     const { email, level } = req.user;
     const { ans } = req.body;
-    if (ans == "more") update_user(email, level).then(() => res.redirect("/level/" + (level + 1)));
+    if (ans == "bagul")
+        update_user(email, level).then(() => {
+            console.log("Level 3 completed!");
+            res.redirect("/level/" + (level + 1));
+        });
     else res.redirect("/level/3");
 });
 
@@ -43,11 +47,11 @@ router.get("/4", (req, res) => {
 router.post("/4", (req, res) => {
     const { email, level } = req.user;
     const { ans } = req.body;
-    if (ans == "72") update_user(email, level).then(() => res.redirect("/level/" + (level + 1)));
+    if (ans == "more") update_user(email, level).then(() => res.redirect("/level/" + (level + 1)));
     else res.redirect("/level/4");
 });
 
-// Level-5 (not yet implemented)
+// Level-5
 router.get("/5", (req, res) => {
     res.render("levels/5");
 });
@@ -55,7 +59,7 @@ router.get("/5", (req, res) => {
 router.post("/5", (req, res) => {
     const { email, level } = req.user;
     const { ans } = req.body;
-    if (ans == "norsemen") update_user(email, level).then(() => res.redirect("/level/" + (level + 1)));
+    if (ans == "11bx1371") update_user(email, level).then(() => res.redirect("/level/" + (level + 1)));
     else res.redirect("/level/5");
 });
 
@@ -67,16 +71,20 @@ router.get("/6", (req, res) => {
 router.post("/6", (req, res) => {
     const { email, level } = req.user;
     const { ans } = req.body;
-    if (ans == "11bx1371") update_user(email, level).then(() => res.redirect("/level/" + (level + 1)));
+    if (ans == "77") update_user(email, level).then(() => res.redirect("/level/" + (level + 1)));
     else res.redirect("/level/6");
 });
 
 // Level-7
 router.get("/7", (req, res) => {
+    res.render("levels/7");
+});
+
+router.post("/7", (req, res) => {
     const { email, level } = req.user;
-    const { size } = req.query;
-    if (size == "140201") update_user(email, level).then(() => res.redirect("/level/" + (level + 1)));
-    else res.render("levels/7");
+    const { ans } = req.body;
+    if (ans == "norsemen") update_user(email, level).then(() => res.redirect("/level/" + (level + 1)));
+    else res.redirect("/level/7");
 });
 
 // Level-8
@@ -89,18 +97,26 @@ router.get("/8", (req, res) => {
 
 // Level-9
 router.get("/9", (req, res) => {
+    res.render("levels/9");
+});
+
+router.post("/9", (req, res) => {
     const { email, level } = req.user;
-    const { ans } = req.query;
-    if (ans == "1") update_user(email, level).then(() => res.redirect("/level/" + (level + 1)));
-    else res.render("levels/9");
+    const { ans } = req.body;
+    if (ans == "annabelle") update_user(email, level).then(() => res.redirect("/level/" + (level + 1)));
+    else res.redirect("/level/9");
 });
 
 // Level-10
 router.get("/10", (req, res) => {
+    res.render("levels/10");
+});
+
+router.post("/10", (req, res) => {
     const { email, level } = req.user;
-    const { ans } = req.query;
-    if (ans == "1") update_user(email, level).then(() => res.redirect("/level/" + (level + 1)));
-    else res.render("levels/10");
+    const { ans } = req.body;
+    if (ans == "140201") update_user(email, level).then(() => res.redirect("/level/" + (level + 1)));
+    else res.redirect("/level/10");
 });
 
 // Level-11
@@ -115,7 +131,7 @@ router.post("/11", (req, res) => {
     else res.redirect("/level/11");
 });
 
-// Level-12
+// Level-12 (not yet implemented)
 router.get("/12", (req, res) => {
     res.render("levels/12");
 });
@@ -127,7 +143,7 @@ router.post("/12", (req, res) => {
     else res.redirect("/level/12");
 });
 
-// Level-13 (not yet implemented)
+// Level-13
 router.get("/13", (req, res) => {
     const ip = req.headers["x-forwarded-for"] || req.ip;
     const geo = geoip.lookup(ip);
@@ -141,25 +157,25 @@ router.post("/13", (req, res) => {
     else res.redirect("/level/13");
 });
 
-// Level-14 (not yet implemented)
+// Level-14
 router.get("/14", (req, res) => {
-    const { email, level } = req.user;
-    const { ans } = req.query;
-    if (ans == "1") update_user(email, level).then(() => res.redirect("/level/" + (level + 1)));
-    else res.render("levels/14");
+    const { location } = req.query;
+    res.render("levels/14", { morse: location === "hoiabaciu" });
 });
 
-// Level-15 (not yet implemented)
+router.post("/14", (req, res) => {
+    const { email, level } = req.user;
+    const { ans } = req.body;
+    if (ans == "blackdeath") update_user(email, level).then(() => res.redirect("/level/" + (level + 1)));
+    else res.redirect("/level/14");
+});
+
+// Level-15
 router.get("/15", (req, res) => {
     const { email, level } = req.user;
-    const { ans } = req.query;
-    if (ans == "1") update_user(email, level).then(() => res.redirect("/level/" + (level + 1)));
+    const { king } = req.query;
+    if (king == "tutankhamun") update_user(email, level).then(() => res.redirect("/level/" + (level + 1)));
     else res.render("levels/15");
-});
-
-// Default
-router.get("/*", (req, res) => {
-    res.redirect("/dashboard");
 });
 
 module.exports = router;

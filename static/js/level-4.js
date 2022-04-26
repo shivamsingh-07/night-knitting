@@ -8,12 +8,10 @@ function click() {
 function feedme() {
     ans = prompt("Feed Me : ");
     if (ans == false) alert("Enter valid answer");
-    else
-        fetch("/level/4", {
-            method: "POST",
-            headers: {
-                "Content-type": "application/x-www-form-urlencoded; charset=UTF-8"
-            },
-            body: "ans=" + ans
-        });
+    else {
+        const xhr = new XMLHttpRequest();
+        xhr.open("POST", "/level/4", true);
+        xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xhr.send("ans=" + ans);
+    }
 }
