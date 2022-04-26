@@ -31,7 +31,7 @@ router.get("/3", (req, res) => {
 router.post("/3", (req, res) => {
     const { email, level } = req.user;
     const { ans } = req.body;
-    if (ans == "bagul") update_user(email, level).then(() => res.redirect("/level/" + (level + 1)));
+    if (ans == "bagul") update_user(email, level).then(() => res.end());
     else res.redirect("/level/3");
 });
 
@@ -43,7 +43,7 @@ router.get("/4", (req, res) => {
 router.post("/4", (req, res) => {
     const { email, level } = req.user;
     const { ans } = req.body;
-    if (ans == "more") update_user(email, level).then(() => res.redirect("/level/" + (level + 1)));
+    if (ans == "more") update_user(email, level).then(() => res.end());
     else res.redirect("/level/4");
 });
 
@@ -55,7 +55,7 @@ router.get("/5", (req, res) => {
 router.post("/5", (req, res) => {
     const { email, level } = req.user;
     const { ans } = req.body;
-    if (ans == "11bx1371") update_user(email, level).then(() => res.redirect("/level/" + (level + 1)));
+    if (ans == "11bx1371") update_user(email, level).then(() => res.end());
     else res.redirect("/level/5");
 });
 
@@ -67,7 +67,7 @@ router.get("/6", (req, res) => {
 router.post("/6", (req, res) => {
     const { email, level } = req.user;
     const { ans } = req.body;
-    if (ans == "77") update_user(email, level).then(() => res.redirect("/level/" + (level + 1)));
+    if (ans == "77") update_user(email, level).then(() => res.end());
     else res.redirect("/level/6");
 });
 
@@ -79,7 +79,7 @@ router.get("/7", (req, res) => {
 router.post("/7", (req, res) => {
     const { email, level } = req.user;
     const { ans } = req.body;
-    if (ans == "norsemen") update_user(email, level).then(() => res.redirect("/level/" + (level + 1)));
+    if (ans == "norsemen") update_user(email, level).then(() => res.end());
     else res.redirect("/level/7");
 });
 
@@ -99,7 +99,7 @@ router.get("/9", (req, res) => {
 router.post("/9", (req, res) => {
     const { email, level } = req.user;
     const { ans } = req.body;
-    if (ans == "annabelle") update_user(email, level).then(() => res.redirect("/level/" + (level + 1)));
+    if (ans == "annabelle") update_user(email, level).then(() => res.end());
     else res.redirect("/level/9");
 });
 
@@ -119,11 +119,11 @@ router.get("/11", (req, res) => {
 router.post("/11", (req, res) => {
     const { email, level } = req.user;
     const { ans } = req.body;
-    if (ans == "kukluxklan(kkk)") update_user(email, level).then(() => res.redirect("/level/" + (level + 1)));
+    if (ans == "kukluxklan(kkk)") update_user(email, level).then(() => res.end());
     else res.redirect("/level/11");
 });
 
-// Level-12 (not yet implemented)
+// Level-12
 router.get("/12", (req, res) => {
     res.render("levels/12");
 });
@@ -131,7 +131,7 @@ router.get("/12", (req, res) => {
 router.post("/12", (req, res) => {
     const { email, level } = req.user;
     const { ans } = req.body;
-    if (ans == "duncan") update_user(email, level).then(() => res.redirect("/level/" + (level + 1)));
+    if (ans == "duncan") update_user(email, level).then(() => res.end());
     else res.redirect("/level/12");
 });
 
@@ -145,7 +145,7 @@ router.get("/13", (req, res) => {
 router.post("/13", (req, res) => {
     const { email, level } = req.user;
     const { ans } = req.body;
-    if (ans == "blackdeath") update_user(email, level).then(() => res.redirect("/level/" + (level + 1)));
+    if (ans == "blackdeath") update_user(email, level).then(() => res.end());
     else res.redirect("/level/13");
 });
 
@@ -158,7 +158,7 @@ router.get("/14", (req, res) => {
 router.post("/14", (req, res) => {
     const { email, level } = req.user;
     const { ans } = req.body;
-    if (ans == "blackdeath") update_user(email, level).then(() => res.redirect("/level/" + (level + 1)));
+    if (ans == "sleepyhollows") update_user(email, level).then(() => res.end());
     else res.redirect("/level/14");
 });
 

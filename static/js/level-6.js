@@ -15,4 +15,9 @@ function key(e) {
     xhr.open("POST", "/level/6", true);
     xhr.setRequestHeader("Content-type", "application/json");
     xhr.send(JSON.stringify({ ans: e.keyCode }));
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === XMLHttpRequest.DONE) {
+            window.location.reload();
+        }
+    };
 }

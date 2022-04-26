@@ -13,5 +13,10 @@ function feedme() {
         xhr.open("POST", "/level/4", true);
         xhr.setRequestHeader("Content-type", "application/json");
         xhr.send(JSON.stringify({ ans }));
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === XMLHttpRequest.DONE) {
+                window.location.reload();
+            }
+        };
     }
 }

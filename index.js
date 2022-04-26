@@ -50,8 +50,7 @@ app.use(
         resave: false,
         saveUninitialized: false,
         cookie: {
-            signed: true,
-            secure: process.env.NODE_ENV === "production"
+            signed: true
         },
         store: MongoStore.create({
             dbName: "sessions",
