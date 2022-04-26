@@ -8,11 +8,11 @@
         <link rel="stylesheet" href="/static/css/level.css" />
     </head>
     <body>
-        <audio loop autoplay>
-            <source src="/static/assets/audio/horror.mp3" type="audio/mp3" />
+        <audio id="audio" loop autoplay>
+            <source src="/static/assets/audio/music.wav" type="audio/wav" />
         </audio>
         <div class="container">
-            <div class="main"><img src="/static/images/level-12.png" alt="" /></div>
+            <div class="main"><img id="img" src="/static/images/level-12.png" alt="" /></div>
             <div class="ans">
                 <div class="input">
                     <form action="/level/12" method="post">

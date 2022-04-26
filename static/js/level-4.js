@@ -11,7 +11,7 @@ function feedme() {
     else {
         const xhr = new XMLHttpRequest();
         xhr.open("POST", "/level/4", true);
-        xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-        xhr.send("ans=" + ans);
+        xhr.setRequestHeader("Content-type", "application/json");
+        xhr.send(JSON.stringify({ ans }));
     }
 }

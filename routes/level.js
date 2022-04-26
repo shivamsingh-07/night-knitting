@@ -31,11 +31,7 @@ router.get("/3", (req, res) => {
 router.post("/3", (req, res) => {
     const { email, level } = req.user;
     const { ans } = req.body;
-    if (ans == "bagul")
-        update_user(email, level).then(() => {
-            console.log("Level 3 completed!");
-            res.redirect("/level/" + (level + 1));
-        });
+    if (ans == "bagul") update_user(email, level).then(() => res.redirect("/level/" + (level + 1)));
     else res.redirect("/level/3");
 });
 
@@ -109,14 +105,10 @@ router.post("/9", (req, res) => {
 
 // Level-10
 router.get("/10", (req, res) => {
-    res.render("levels/10");
-});
-
-router.post("/10", (req, res) => {
     const { email, level } = req.user;
-    const { ans } = req.body;
-    if (ans == "140201") update_user(email, level).then(() => res.redirect("/level/" + (level + 1)));
-    else res.redirect("/level/10");
+    const { size } = req.query;
+    if (size == "140201") update_user(email, level).then(() => res.redirect("/level/" + (level + 1)));
+    else res.render("levels/10");
 });
 
 // Level-11
