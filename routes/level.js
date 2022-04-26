@@ -170,4 +170,10 @@ router.get("/15", (req, res) => {
     else res.render("levels/15");
 });
 
+router.get("/:id", (req, res) => {
+    const { id } = req.params;
+    if (id > 15) res.redirect("/dashboard");
+    else res.render("levels/" + id);
+});
+
 module.exports = router;
